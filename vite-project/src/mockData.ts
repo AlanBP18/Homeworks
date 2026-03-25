@@ -3,6 +3,7 @@ import type { Persona } from "./Queue";
 function fechaPRE(Numi:number): Date {
   const ahora = new Date();
   return new Date(ahora.getTime() + Numi);
+  /* no se por que no funciona el sumar fecha :c*/
 }
 
 export const personasMock: Persona[] = [
