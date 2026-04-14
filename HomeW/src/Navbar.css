@@ -1,0 +1,117 @@
+:root {
+  --sidebar-bg: #1a1c1e;
+  --sidebar-hover: #2c2e31;
+  --sidebar-active: #34495e;
+  --sidebar-accent: #3498db;
+  --text-main: #e0e0e0;
+  --text-muted: #a0a0a0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 260px;
+  background-color: var(--sidebar-bg);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  font-family: 'Inter', -apple-system, sans-serif;
+  z-index: 1000;
+  padding-top: 20px;
+}
+
+.navbar-brand {
+  padding: 10px 25px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-link-container {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: var(--text-main);
+  flex-grow: 1;
+}
+
+.nav-link-container:hover {
+  background-color: var(--sidebar-hover);
+}
+
+.nav-link-container.active {
+  background-color: rgba(52, 152, 219, 0.15);
+  box-shadow: inset 4px 0 0 var(--sidebar-accent);
+}
+
+.nav-label {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.caret {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+  color: var(--text-muted);
+}
+
+.caret.open {
+  transform: rotate(180deg);
+}
+
+
+.nav-dropdown {
+  background-color: #141618;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.nav-dropdown.open {
+  max-height: 500px;
+}
+
+
+.nav-dropdown .nav-link-container {
+  padding-left: 45px;
+  font-size: 0.9rem;
+}
+
+.nav-dropdown .nav-label {
+  color: var(--text-muted);
+}
+
+.nav-dropdown .nav-item:hover .nav-label {
+  color: var(--text-main);
+}
