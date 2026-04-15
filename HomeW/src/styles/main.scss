@@ -1,0 +1,17 @@
+// Import Bootstrap SCSS
+@import "bootstrap/scss/bootstrap";
+
+// Custom global styles
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.transition-hover {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+}
+
+.transition-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
